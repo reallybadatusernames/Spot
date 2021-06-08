@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.1.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Quartz" Version="3.3.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\Site\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Spot.Domain\Spot.Domain.csproj" />
+  </ItemGroup>
+</Project>

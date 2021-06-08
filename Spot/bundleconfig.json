@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/js/site.js",
+    "inputFiles": [
+      "wwwroot/components/js/nav.js"
+    ]
+  }
+]

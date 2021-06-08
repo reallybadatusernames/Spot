@@ -1,0 +1,17 @@
+﻿@import "_vars.scss";
+
+.panel {
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 0 13px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 0 13px 0 rgba(62, 44, 90, .08);
+
+    .panel-header {
+        border-bottom: 1px solid lighten($color-dark, 20);
+        padding: .25em .75em;
+    }
+
+    .panel-body {
+        padding: .25em .75em;
+    }
+}

@@ -1,0 +1,106 @@
+﻿@import "_vars.scss";
+
+$width: 16.875rem;
+
+.sidebar-toggle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s .4s ease;
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    margin: 15px;
+    z-index: 199;
+    @media(max-width: $mobile) { 
+        display: flex;
+    }
+
+    &.active {
+        div {
+            background: white;
+        }
+
+        div:nth-child(1) {
+            width: 70%;
+        }
+
+        div:nth-child(2) {
+            width: 85%;
+        }
+
+        div:nth-child(3) {
+            width: 100%;
+        }
+    }
+
+    div {
+        height: 4px;
+        background: #000;
+        border-radius: 1rem;
+        display: flex;
+        width: 100%;
+        transition: 0.2s ease;
+    }
+
+    div:nth-child(1) {
+    }
+
+    div:nth-child(2) {
+        margin-top: 4px;
+        width: 85%;
+    }
+
+    div:nth-child(3) {
+        margin-top: 4px;
+        width: 70%;
+    }
+}
+
+.sidebar {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: $width;
+    max-width: $width;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 200;
+    will-change: left,right;
+    background-image: linear-gradient(to right, #151b21, #1e242c, #272e37, #313842, #3c424e);
+    background-color: $color-dark;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+
+
+    .hidden {
+        transform: translateX(-$width);
+        box-shadow: none;
+    }
+
+    @media(max-width: $mobile) {
+        transform: translateX(-$width);
+        box-shadow: none;
+        position: fixed !important;
+        top: 0;
+        bottom: 0;
+
+        &.active {
+            transition: 0.2s ease;
+            -webkit-transition: 0.2s ease;
+            transform: translateX(0) !important;
+            -webkit-transform: translateX(0) !important;
+            box-shadow: 0px 0px 60px rgba(0, 0, 0, .4);
+        }
+
+        &.transitioning {
+            transition: 0.2s ease;
+            -webkit-transition: 0.2s ease;
+        }
+    }
+}
